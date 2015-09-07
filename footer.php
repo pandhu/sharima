@@ -16,141 +16,163 @@
 
 ?>
 
-	</div><!-- .site-content -->
+</div><!-- .site-content -->
 
-<footer id="footer">
-
-<div class="container">
-
-
-
-	<?php
-		$footer_sections = 0;
-		$zerif_address = get_theme_mod('zerif_address',__('Company address','zerif-lite'));
-		$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
-		
-		$zerif_email = get_theme_mod('zerif_email','<a href="mailto:contact@site.com">contact@site.com</a>');
-		$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');
-		
-		$zerif_phone = get_theme_mod('zerif_phone','<a href="tel:0 332 548 954">0 332 548 954</a>');
-		$zerif_phone_icon = get_theme_mod('zerif_phone_icon',get_template_directory_uri().'/images/telephone65-blue.png');
-
-		$zerif_socials_facebook = get_theme_mod('zerif_socials_facebook','#');
-		$zerif_socials_twitter = get_theme_mod('zerif_socials_twitter','#');
-		$zerif_socials_linkedin = get_theme_mod('zerif_socials_linkedin','#');
-		$zerif_socials_behance = get_theme_mod('zerif_socials_behance','#');
-		$zerif_socials_dribbble = get_theme_mod('zerif_socials_dribbble','#');
-			
-		$zerif_copyright = get_theme_mod('zerif_copyright');
-
-		if(!empty($zerif_address) || !empty($zerif_address_icon)):
-			$footer_sections++;
-		endif;
-		
-		if(!empty($zerif_email) || !empty($zerif_email_icon)):
-			$footer_sections++;
-		endif;
-		
-		if(!empty($zerif_phone) || !empty($zerif_phone_icon)):
-			$footer_sections++;
-		endif;
-		if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble) || 
-		!empty($zerif_copyright)):
-			$footer_sections++;
-		endif;
-		
-		if( $footer_sections == 1 ):
-			$footer_class = 'col-md-12';
-		elseif( $footer_sections == 2 ):
-			$footer_class = 'col-md-6';
-		elseif( $footer_sections == 3 ):
-			$footer_class = 'col-md-4';
-		elseif( $footer_sections == 4 ):
-			$footer_class = 'col-md-3';
-		else:
-			$footer_class = 'col-md-3';
-		endif;
-		
-		/* COMPANY ADDRESS */
-		if( !empty($zerif_address) ):
-			echo '<div class="'.$footer_class.' company-details">';
-				echo '<div class="icon-top red-text">';
-					if( !empty($zerif_address_icon) ) echo '<img src="'.esc_url(__($zerif_address_icon,'zerif-lite')).'">';
-				echo '</div>';
-				echo $zerif_address;
-			echo '</div>';
-		endif;
-		
-		/* COMPANY EMAIL */
-		
-		
-		if( !empty($zerif_email) ):
-			echo '<div class="'.$footer_class.' company-details">';
-				echo '<div class="icon-top green-text">';
+<footer>
+	<!-- FOOTER -->
+	<div class="title-lines-container">
+		<div class="container">
+			<div class="row">
+				<!-- LOGO  -->	
+				<div class="col-md-4">
+					<div class="logo-row-footer-2 clearfix">
+						<div class="logo-container left">
+							<a href="index.html">
+								<div class="logo">
+									<img src="images/logo.png" class="logo-img" alt="">
+								</div>
+							</a>
+						</div>
+						<div class="logo-text-container">
+							<div class="logo-text">WE'D LOVE HEARING<br> FROM YOU</div>
+						</div>	
+					</div>	
+					<div class="social-icons-container-footer">
+						<ul class="social-icons-ul">
+							<li>
+								<a href="#">
+									<span aria-hidden="true" class="social_facebook main-menu-icon"></span>
+								</a>
+							</li>	
+							<li>	
+								<a href="#">
+									<span aria-hidden="true" class="social_twitter main-menu-icon"></span>
+								</a>
+							</li>	
+							<li>	
+								<a href="#">
+									<span aria-hidden="true" class="social_linkedin main-menu-icon"></span>
+								</a>
+							</li>	
+							<li>	
+								<a href="#">
+									<span aria-hidden="true" class="social_skype main-menu-icon"></span>
+								</a>
+							</li>	
+						</ul>		
+					</div>						
+				</div>
+				<!-- LATEST POSTS -->
+				<div class="col-md-4">
+					<h3 class="title-block footer-2-block">LATEST POSTS</h3>
+					<div class="lite-grey-bg full-col-container">
+						<ul class="latest-post-footer clearfix">
+							<li class="latest-post-footer-item">
+								<a href="blog-single.html">
+									<div class="post-icon-footer">
+										<span aria-hidden="true" class="icon_image main-menu-icon"></span>
+									</div>
+									<div class="post-text-footer">
+										<h4 class="title-post-footer">Donec id elit</h4>
+										<h4 class="date-post-footer">July 10, 2015</h4>
+									</div>
+								</a>			
+							</li>
+							<li class="latest-post-footer-item">
+								<a href="blog-single.html">
+									<div class="post-icon-footer">
+										<span aria-hidden="true" class="icon_document_alt main-menu-icon"></span>
+									</div>
+									<div class="post-text-footer">
+										<h4 class="title-post-footer">Donec id elit</h4>
+										<h4 class="date-post-footer">July 10, 2015</h4>
+									</div>
+								</a>	
+							</li>
+							<li class="latest-post-footer-item">
+								<a href="blog-single.html">
+									<div class="post-icon-footer">
+										<span aria-hidden="true" class="icon_film main-menu-icon"></span>
+									</div>
+									<div class="post-text-footer">
+										<h4 class="title-post-footer">Donec id elit</h4>
+										<h4 class="date-post-footer">July 10, 2015</h4>
+									</div>
+								</a>	
+							</li>
+						</ul>
+					</div>					
+				</div>	
+				<!-- CONTACT INFO -->
+				<div class="col-md-4">
 					
-					if( !empty($zerif_email_icon) ) echo '<img src="'.esc_url(__($zerif_email_icon,'zerif-lite')).'">';
-				echo '</div>';
-				echo $zerif_email;
-			echo '</div>';
-		endif;
-		
-		/* COMPANY PHONE NUMBER */
-		
-		
-		if( !empty($zerif_phone) ):
-			echo '<div class="'.$footer_class.' company-details">';
-				echo '<div class="icon-top blue-text">';
-					if( !empty($zerif_phone_icon) ) echo '<img src="'.esc_url(__($zerif_phone_icon,'zerif-lite')).'">';
-				echo '</div>';
-				echo $zerif_phone;
-			echo '</div>';
-		endif;
-		
-		if( !empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble) || 
-		!empty($zerif_copyright)):
-		
-					echo '<div class="'.$footer_class.' copyright">';
-					if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble)):
-						echo '<ul class="social">';
+					<h3 class="title-block title-full-width footer-block title-bg-after">CONTACT INFO</h3>
+					<div class="main-color-bg contact-bg-after">
 						
-						/* facebook */
-						if( !empty($zerif_socials_facebook) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_facebook,'zerif-lite')).'"><i class="fa fa-facebook"></i></a></li>';
-						endif;
-						/* twitter */
-						if( !empty($zerif_socials_twitter) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_twitter,'zerif-lite')).'"><i class="fa fa-twitter"></i></a></li>';
-						endif;
-						/* linkedin */
-						if( !empty($zerif_socials_linkedin) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_linkedin,'zerif-lite')).'"><i class="fa fa-linkedin"></i></a></li>';
-						endif;
-						/* behance */
-						if( !empty($zerif_socials_behance) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_behance,'zerif-lite')).'"><i class="fa fa-behance"></i></a></li>';
-						endif;
-						/* dribbble */
-						if( !empty($zerif_socials_dribbble) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_dribbble,'zerif-lite')).'"><i class="fa fa-dribbble"></i></a></li>';
-						endif;
-						echo '</ul>';
-					endif;	
-			
-			
-					if( !empty($zerif_copyright) ):
-						echo esc_attr($zerif_copyright);
-					endif;
+						<ul class="contact-list-footer">
+							<li class="contact-list-item clearfix">
+								<div class="contact-icon-container">
+									<span aria-hidden="true" class="icon_pin_alt main-menu-contact-icon"></span>
+								</div>
+								<div class="contact-text-container">Company, 123 Aolsom, Suite 700, New York</div>
+							</li>
+							<li class="contact-list-item clearfix">
+								<div class="contact-icon-container">
+									<span aria-hidden="true" class="icon_phone main-menu-contact-icon"></span>
+								</div>	
+								<div class="contact-text-container">(123)&nbsp;4560-789, (123)&nbsp;9870-654</div>
+							</li>
+							<li class="contact-list-item clearfix">
+								<div class="contact-icon-container">
+									<span aria-hidden="true" class="icon_mail_alt main-menu-contact-icon"></span>
+								</div>
+								<div class="contact-text-container">	
+									<a class="a-mail" href="#">email@felius.com</a>
+								</div>	
+							</li>
+						</ul>
+						<div class="mask-main-color-bg"></div> 					
+					</div>					
 					
-					echo '<div class="zerif-copyright-box"><a class="zerif-copyright" href="http://themeisle.com/themes/zerif-lite/" target="_blank" rel="nofollow">Zerif Lite </a>'.__('powered by','zerif-lite').'<a class="zerif-copyright" href="http://wordpress.org/" target="_blank" rel="nofollow"> WordPress</a></div>';
-					
-					echo '</div>';
-			
-		endif;
-	?>
-
-</div> <!-- / END CONTAINER -->
-
-</footer> <!-- / END FOOOTER  -->
+				</div> 
+			</div>
+		</div>
+	</div>
+	<!-- COPYRIGHT  -->	
+	<div class="copyright-container title-lines-container">
+		<div class="container">
+			<div class="row">	
+				<div class="col-md-8">
+					<div class="footer-menu-container">
+						<nav class="clearfix" id="footer-nav">
+							<ul class="footer-menu">
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="shortcodes.html">FEATURES</a></li>
+								<li><a href="portfolio.html">PORTFOLIO</a></li>
+								<li><a href="blog-large-images.html">BLOG</a></li>
+								<li><a href="contact.html">CONTACT</a></li>
+								<li><a href="http://themeforest.net/item/amilia-responsive-multipurpose-template/10067059?ref=abcgomel">PURCHASE</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-copyright-container">
+						<div class="mask-footer-copyright-container"></div>
+						<div class="footer-copyright-text">
+							© Amilia - Build with Passion by <a class="author" href="http://themeforest.net/user/abcgomel/portfolio">AbcGomel</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>				
+	</div>
+	<!-- COPYRIGHT -->
+	<p id="back-top">
+		<a href="#top" title="Back to Top"><span></span></a>
+	</p>
+</footer>
 
 
 
