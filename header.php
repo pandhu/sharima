@@ -14,136 +14,172 @@
 
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
+<!--
 
-<html <?php language_attributes(); ?>>
-
+	Theme Name: AMILIA
+	Description: HTML/CSS 
+	Author: Abcgomel 
+	Version: 1.0
+	Designed & Coded by Abcgomel
+	
+-->
+<!--[if lt IE 7 ]> <html  class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html  class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html  class="ie8"> <![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-<!--[if lt IE 9]>
-<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/ie.css" type="text/css">
-<![endif]-->
-
-<?php wp_head(); ?>
-
-</head>
-
-
-
-<?php if(isset($_POST['scrollPosition'])): ?>
-
-	<body <?php body_class(); ?> onLoad="window.scrollTo(0,<?php echo intval($_POST['scrollPosition']); ?>)">
-
-<?php else: ?>
-
-	<body <?php body_class(); ?> >
-
-<?php endif; ?>
-
-
-
-
-<!-- =========================
-
-   PRE LOADER
-
-============================== -->
-<?php
-	
- global $wp_customize;
-
- if(is_front_page() && !isset( $wp_customize ) && get_option( 'show_on_front' ) != 'page' ): 
- 
-	$zerif_disable_preloader = get_theme_mod('zerif_disable_preloader');
-	
-	if( isset($zerif_disable_preloader) && ($zerif_disable_preloader != 1)):
-		 
-		echo '<div class="preloader">';
-			echo '<div class="status">&nbsp;</div>';
-		echo '</div>';
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+		<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<![endif]-->
+		<meta name="robots" content="index, follow" > 
+		<meta name="keywords" content="HTML5 Template" > 
+		<meta name="description" content="Amilia - Responsive HTML5 Template" > 
+		<meta name="author" content="abcgomel">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="favicon.ico">
 		
-	endif;	
+		
+		<!-- CSS begin -->
 
-endif; ?>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 
+		<!--GOOGLE FONT-->		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400' rel='stylesheet' type='text/css'>
 
-<header id="home" class="header">
+		<!-- IE warning CSS -->
+		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
+		
+		<!--Icons ELEGANT FONT & FONT AWESOME-->		
+		<link rel="stylesheet" href="css/icons-fonts.css" >		
+		<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
 
-	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+		<!-- Magnific popup  in style.css-->	
 
-		<div class="container">
+		<!-- Owl Carousel Assets in style.css -->
 
-			<div class="navbar-header responsive-logo">
+		<!-- FLEXSLIDER FOR POSTS	-->		
+		<link rel="stylesheet" href="css/flexslider-for-posts.css" >
 
-				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+		<!--CSS theme-->		
+		<link rel="stylesheet" href="css/style.css" >
+		
+		<!--STILE SWITCHER in style.css-->	
+		<link rel="stylesheet" href="css/layout/wide.css" id="layout">
+		<link rel="stylesheet" href="css/colors/yellow.css" id="colors">		
 
-				<span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
+		<!-- ANIMATE -->
+		<link rel='stylesheet' href="css/animate.min.css">
 
-				<span class="icon-bar"></span>
+		<!-- CSS end -->
 
-				<span class="icon-bar"></span>
+		<!-- JS begin some js files in bottom of the file-->
 
-				<span class="icon-bar"></span>
+		<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		  <![endif]-->
+		  <?php wp_head(); ?>
+		</head>
+		<body class="fixed-header preloader-overflow">
 
-				</button>
+			<!-- Pre LOADER -->		
+			<div id="preloader"  class="se-pre-con">
+				<div class="preloader-container">
 
+					<div id="fountainG">
+						<div id="fountainG_1" class="fountainG">
+						</div>
+						<div id="fountainG_2" class="fountainG">
+						</div>
+						<div id="fountainG_3" class="fountainG">
+						</div>
+					</div>
 
-
-				<?php
-
-					$zerif_logo = get_theme_mod('zerif_logo');
-
-					if(isset($zerif_logo) && $zerif_logo != ""):
-
-						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-
-							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-
-						echo '</a>';
-
-					else:
-
-						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-						
-							if( file_exists(get_stylesheet_directory()."/images/logo.png")):
-							
-								echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-							
-							else:
-								
-								echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-								
-							endif;
-
-						echo '</a>';
-
-					endif;
-
-				?>
-
-
-
+				</div>	
 			</div>
 
-			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation"   id="site-navigation">
+			<div id="wrap" class="boxed ">
+				<div class="grey-bg "> <!-- Grey bg  -->	
 
-				<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-
-			</nav>
-
+	<!--[if lte IE 7]>
+	<div id="ie-container">
+		<div id="ie-cont-close">
+			<a href='#' onclick='javascript&#058;this.parentNode.parentNode.style.display="none"; return false;'><img src='images/ie-warn/ie-warning-close.jpg' style='border: none;' alt='Close'></a>
 		</div>
-
+		<div id="ie-cont-content" >
+			<div id="ie-cont-warning">
+				<img src='images/ie-warn/ie-warning.jpg' alt='Warning!'>
+			</div>
+			<div id="ie-cont-text" >
+				<div id="ie-text-bold">
+					You are using an outdated browser
+				</div>
+				<div id="ie-text">
+					For a better experience using this site, please upgrade to a modern web browser.
+				</div>
+			</div>
+			<div id="ie-cont-brows" >
+				<a href='http://www.firefox.com' target='_blank'><img src='images/ie-warn/ie-warning-firefox.jpg' alt='Download Firefox'></a>
+				<a href='http://www.opera.com/download/' target='_blank'><img src='images/ie-warn/ie-warning-opera.jpg' alt='Download Opera'></a>
+				<a href='http://www.apple.com/safari/download/' target='_blank'><img src='images/ie-warn/ie-warning-safari.jpg' alt='Download Safari'></a>
+				<a href='http://www.google.com/chrome' target='_blank'><img src='images/ie-warn/ie-warning-chrome.jpg' alt='Download Google Chrome'></a>
+			</div>
+		</div>
 	</div>
+	<![endif]-->
+	
+	<!-- HEADER 1 -->
+	<header id="nav" class="header header-1">
+		<div  class="header-wrapper">
+			<div class="container">
 
-	<!-- / END TOP BAR -->
+				<div class="logo-row"> 
+					<!-- LOGO --> 
+					<div class="logo-container">
+						<a href="index.html">
+							<div class="logo">
+								<img src="images/logo.png" class="logo-img" alt="Logo">
+							</div>
+						</a>
+					</div>
+					<!-- BUTTON --> 
+					<div class="menu-btn-respons-container">
+						<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".main-menu .navbar-collapse">
+							<span class="text">MENU</span>
+							<span aria-hidden="true" class="icon_menu main-menu-icon"></span>
+						</button>
+					</div> 
+
+				</div>
+
+			</div><!-- END CONTAINER -->
+
+			<div class="main-menu-container">
+
+				<div class="container">	
+					<!-- MAIN MENU -->
+					<div class="main-menu">
+						<div class="navbar navbar-default" role="navigation">
+							<!-- MAIN MENU LIST-->
+							<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
+						</div>
+					</div><!-- main-menu -->
+
+				</div><!-- container -->
+
+			</div><!--main-menu-container -->
+
+
+
+		</div><!-- header-wrapper -->
+	</header><!-- header -->
