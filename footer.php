@@ -180,6 +180,44 @@
 
 
 
-</body>
+<script>
+	
+	$(document).ready(function() {	
 
-</html>
+				//FLEXSLIDER---------------------------------------------------- 
+				function carFlex() {
+					$('.carousel-post-style1').flexslider({ });
+				};
+				
+				carFlex();
+				
+				//FLICKR FEED----------------------------------------------------
+				$('#flickrfeed').jflickrfeed({
+					limit: 6,
+					qstrings: {
+						id: '91212552@N07'
+					},
+					itemTemplate:
+					'<li>' +
+					'<a class="lightbox" rel="colorbox" href="{{image}}" title="{{title}}">' +
+					'<img src="{{image_s}}" alt="{{title}}" />' +
+					'</a>' +
+					'</li>'
+				});
+			});	
+</script>				
+
+<!-- Pre LOADER -->
+<script>
+	window.onload = function() {
+		document.body.removeChild(document.getElementById('preloader'));
+		$('body').removeClass('preloader-overflow');
+	}
+</script>
+
+<!-- JS end -->	
+
+<div class="switcher"></div>
+
+</body>
+</html>	

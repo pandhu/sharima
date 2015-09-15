@@ -42,43 +42,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="shortcut icon" href="favicon.ico">
-		
-		
-		<!-- CSS begin -->
-
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-
-		<!--GOOGLE FONT-->		
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,700,300,400' rel='stylesheet' type='text/css'>
-
-		<!-- IE warning CSS -->
-		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie-warning.css" ><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8-fix.css" ><![endif]-->
-		
-		<!--Icons ELEGANT FONT & FONT AWESOME-->		
-		<link rel="stylesheet" href="css/icons-fonts.css" >		
-		<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
-
-		<!-- Magnific popup  in style.css-->	
-
-		<!-- Owl Carousel Assets in style.css -->
-
-		<!-- FLEXSLIDER FOR POSTS	-->		
-		<link rel="stylesheet" href="css/flexslider-for-posts.css" >
-
-		<!--CSS theme-->		
-		<link rel="stylesheet" href="css/style.css" >
-		
-		<!--STILE SWITCHER in style.css-->	
-		<link rel="stylesheet" href="css/layout/wide.css" id="layout">
-		<link rel="stylesheet" href="css/colors/yellow.css" id="colors">		
-
-		<!-- ANIMATE -->
-		<link rel='stylesheet' href="css/animate.min.css">
-
-		<!-- CSS end -->
-
 		<!-- JS begin some js files in bottom of the file-->
 
 		<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
@@ -92,7 +55,6 @@
 		</head>
 		<body class="fixed-header preloader-overflow">
 
-			<!-- Pre LOADER -->		
 			<div id="preloader"  class="se-pre-con">
 				<div class="preloader-container">
 
