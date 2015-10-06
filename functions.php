@@ -310,8 +310,8 @@ function zerif_scripts()
     wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.min.css');
     
 
-    wp_enqueue_script('jquery_js', get_template_directory_uri() . '/js/jquery.min.js');
-    wp_enqueue_script('jquery_ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array('jquery'), '20120206', true);
+    wp_enqueue_script('jquery_js', get_template_directory_uri() . '/js/jquery.min.js', array(), '20120206', true);
+    wp_enqueue_script('jquery_ui', get_template_directory_uri() . '/js/jquery-ui.min.js', array('jquery_js'), '20120206', true);
     wp_enqueue_script('jquery_flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array(), '20120206', true);
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20120206', true);
     wp_enqueue_script('flickrfeed', get_template_directory_uri() . '/js/jflickrfeed.min.js', array(), '20120206', true);

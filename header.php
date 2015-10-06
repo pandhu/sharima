@@ -109,23 +109,23 @@
 				<div class="logo-row"> 
 					<!-- LOGO --> 
 					<div class="logo-container">
-						<a href="index.html">
+						<a href="<?php echo home_url('/')?>">
 							<div class="logo">
 								<?php
 									$zerif_logo = get_theme_mod('zerif_logo');
 									//var_dump($zerif_logo);
 									if(isset($zerif_logo) && $zerif_logo != ""):
-										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="">';
+										//echo '<a href="'.esc_url( home_url( '/' ) ).'" class="">';
 											echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-										echo '</a>';
+										//echo '</a>';
 									else:
-										echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+										//echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 											if( file_exists(get_stylesheet_directory()."/images/logo.png")):
 												echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';									
 											else:										
 												echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';												
 											endif;
-										echo '</a>';
+										//echo '</a>';
 									endif;
 								?>
 							</div>

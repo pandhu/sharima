@@ -18,7 +18,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb">
-							<li><a class="a-invert" href="index.html">HOME</a></li>
+							<li><a class="a-invert" href="<?php echo home_url('/')?>">HOME</a></li>
 							<li><a class="a-invert" href="blog-large-image.html">BLOG</a></li>
 							<li class="active"><?php the_title(); ?></li>
 						</ul>
@@ -59,11 +59,11 @@ get_header(); ?>
 						endif; 
 						?>
 							<div class="blog-caption-container">
-								<h2><a class="a-invert" href="blog-single.html"><?php the_title(); ?></a></h2>
+								<h2><a class="a-invert" href="<?php get_permalink()?>"><?php the_title(); ?></a></h2>
 								<ul class="post-meta clearfix">
 									<li><span aria-hidden="true" class="icon_clock_alt"></span> <?php zerif_posted_on(); ?></li>
 									<li><span aria-hidden="true" class="icon_profile"></span><a href="#"> <?php the_author()?></a></li>
-									<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="blog-single.html#comments"> <?php wp_count_comments(the_id()) ?> COMMENTS</a></li>
+									<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="#comments"> <?php wp_count_comments(the_id()) ?> COMMENTS</a></li>
 									<li><span aria-hidden="true" class="icon_tags_alt"></span> 
 										<?php
 										$posttags = get_the_tags();
@@ -173,8 +173,15 @@ get_header(); ?>
 													<div class="col-xs-12 col-sm-4 col-md-4 m-bot-30">
 														<div class="pos-relative">
 															<div class="view view-first hovered">
-																<a href="images/content/blog-sqr-4.jpg" class="lightbox">
-																	<img src="images/content/blog-wide-4.jpg" alt="Ipsum">
+																<?php if(has_post_thumbnail()):
+																	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+																?>
+																<a href="<?php echo $image[0]?>" class="lightbox">
+																	<img src="<?php echo $image[0]?>" alt="Ipsum">
+																<?php else:?>
+																<a href="<?php echo get_template_directory_uri().'/images/content/blog-sqr-4.jpg'?>" class="lightbox">
+																	<img src="<?php echo get_template_directory_uri().'/images/content/blog-sqr-4.jpg'?>" alt="Ipsum">
+																<?php endif;?>
 																	<div class="mask">
 																		<div class="zoom info"><span aria-hidden="true" class="icon_search"></span></div>
 																	</div>
