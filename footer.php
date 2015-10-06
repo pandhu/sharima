@@ -214,7 +214,33 @@
 		$('body').removeClass('preloader-overflow');
 	}
 </script>
+<!-- IMPORTANT SCRIPTS SETTINGS -->
+			<script>
+ 
+				$(document).ready(function() {	
 
+				//FLEXSLIDER---------------------------------------------------- 
+					function carFlex() {
+						$('.carousel-post-style1').flexslider({ });
+					  };
+					  
+					carFlex();
+				
+				//FLICKR FEED----------------------------------------------------
+					$('#flickrfeed').jflickrfeed({
+						limit: 6,
+						qstrings: {
+							id: '91212552@N07'
+						},
+						itemTemplate:
+						'<li>' +
+							'<a class="lightbox" rel="colorbox" href="{{image}}" title="{{title}}">' +
+								'<img src="{{image_s}}" alt="{{title}}" />' +
+							'</a>' +
+						'</li>'
+					});
+				});	
+			</script>		
 <!-- JS end -->	
 
 <div class="switcher"></div>

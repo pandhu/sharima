@@ -38,15 +38,26 @@ get_header(); ?>
 						
 						<!-- ITEM 1-->
 						<div class="element col-md-12 m-bot-10" >
+						<?php 
+						if ( has_post_thumbnail() ):  ?>
+							<?php
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+							//var_dump($image);
+							?>
 							<div class="view view-first hovered">
-								<a href="images/content/blog-full-big-1.jpg" class="lightbox">
-									<img src="images/content/blog-wide-1.jpg" alt="Ipsum" >
+								<a href="<?php echo $image[0]?>" class="lightbox">
+									<?php
+										the_post_thumbnail('full');
+									?>
+									<!--<img src="images/content/blog-wide-1.jpg" alt="Ipsum" >-->
 									<div class="mask">
 										<div class="zoom info"><span aria-hidden="true" class="icon_search"></span></div>
 									</div>
 								</a>
 							</div>
-
+						<?php
+						endif; 
+						?>
 							<div class="blog-caption-container">
 								<h2><a class="a-invert" href="blog-single.html"><?php the_title(); ?></a></h2>
 								<ul class="post-meta clearfix">
