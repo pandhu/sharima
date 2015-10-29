@@ -40,7 +40,11 @@ if ( post_password_required() ) {
 <div id="comments" class="col-md-12 left-sidebar">
 	<div class="title-lines-sidebar m-bot-30">
 		<div class="title-block">
-			21 COMMENTS
+			<?php
+				//$comments_count = wp_count_comments(the_id());
+				//$comments_count = 1;
+				echo $post->comment_count.' COMMENTS';
+			?>
 		</div>
 	</div>	
 </div>

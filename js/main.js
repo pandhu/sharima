@@ -175,7 +175,7 @@ $(document).on("scroll", function() {
 
 //MAGNIFIC POPUP SETTINGS -----------------------------------------------------
 function magnPopupStart() {
-	console.log('popup');
+	//console.log('popup');
 					// Inline popups
 					$('#inline-popups').magnificPopup({
 						delegate: 'a',

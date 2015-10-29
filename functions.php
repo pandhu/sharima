@@ -306,7 +306,7 @@ function zerif_scripts()
     wp_enqueue_style('flexslider-for-posts', get_template_directory_uri() . '/css/flexslider-for-posts.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
     wp_enqueue_style('layout_wide', get_template_directory_uri() . '/css/layout/wide.css');
-    wp_enqueue_style('colors_yellow', get_template_directory_uri() . '/css/colors/yellow.css');
+    wp_enqueue_style('colors yellow?', get_template_directory_uri() . '/css/colors/teal.css');
     wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.min.css');
     
 
