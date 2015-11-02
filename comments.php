@@ -156,17 +156,40 @@ if ( post_password_required() ) {
 		<div class="gray-bg-container m-top-min-35 m-bot-30">
 			<div class="contact-form-container">
 				<?php 
-					$args  = array(
-						'comment_field' => '<div class="row">'.
-							'<div>'.
-								'<div class="col-md-12 m-bot-20">'.
-									'<textarea maxlength="5000" data-msg-required="Please enter your message." rows="7" class="form-control" name="message" id="message" placeholder="MESSAGE" required></textarea>'.
+					$fields =  array(
+
+					  'author' => '<div class="">'.
+							'<div class="row comment-form-field">'.
+								'<div class="col-md-6 sm-bot-15">'.
+									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Name." maxlength="100" class="form-control" name="name" id="name" placeholder="NAME" required>'.
+								'</div>'.		
+								'<div class="col-md-6 sm-bot-15">'.
+									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Email." maxlength="100" class="form-control" name="email" id="email" placeholder="EMAIL" required>'.
+								'</div>'.
+							'</div>'.
+							'<div class="row comment-form-field">'.
+								'<div class="col-md-6 sm-bot-15">'.
+									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Web URL." maxlength="100" class="form-control" name="url" id="url" placeholder="URL">'.
 								'</div>'.
 							'</div>'.
 						'</div>'
 					);
+					$args  = array(
+						'comment_field' => '<div class="">'.
+							'<div class="row comment-form-field">'.
+								'<div class="col-md-12 sm-bot-20">'.
+									'<textarea data-msg-required="Please enter your message." rows="7" class="form-control" name="message" id="message" placeholder="MESSAGE" required></textarea>'.
+								'</div>'.
+							'</div>'.
+						'</div>',
+						'comment_notes_after'=>'',
+						'class_submit' => 'button medium thin-bg-dar comment-form-field',
+						'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+
+
+					);
 				?>
-				<?php comment_form(array('comment_notes_after' => '')); ?>
+				<?php comment_form($args); ?>
 
 				<form id="contact-form" action="#" method="POST">
 
