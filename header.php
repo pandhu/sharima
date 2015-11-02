@@ -101,47 +101,38 @@
 	<![endif]-->
 	
 	<!-- HEADER 1 -->
-	<header id="nav" class="header header-1">
-		<div  class="header-wrapper">
-			<div class="container">
+<header id="nav" class="header header-1">
+  <div  class="header-wrapper">
+	<div class="container">
+	  
+	  <div class="logo-row"> 
+		<!-- LOGO --> 
+		<div class="logo-container">
+		  <a href="index.html">
+			  <div class="logo">
+				  <img src="images/logo.png" class="logo-img" alt="Logo">
+			  </div>
+		  </a>
+		</div>
+		<!-- BUTTON --> 
+		<div class="menu-btn-respons-container">
+			<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".main-menu .navbar-collapse">
+				<span class="text">MENU</span>
+				<span aria-hidden="true" class="icon_menu main-menu-icon"></span>
+			</button>
+		</div> 		
+	  </div>
+	</div><!-- END CONTAINER -->
 
-				<div class="logo-row"> 
-					<!-- LOGO --> 
-					<div class="logo-container">
-						<a href="index.html">
-							<div class="logo">
-								<img src="images/logo.png" class="logo-img" alt="Logo">
-							</div>
-						</a>
-					</div>
-					<!-- BUTTON --> 
-					<div class="menu-btn-respons-container">
-						<button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target=".main-menu .navbar-collapse">
-							<span class="text">MENU</span>
-							<span aria-hidden="true" class="icon_menu main-menu-icon"></span>
-						</button>
-					</div> 
-
+	<div class="main-menu-container">
+		<div class="container">
+			<div class="main-menu">
+				<div class="navbar navbar-default" role="navigation">
+					<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'collapse collapsing navbar-collapse right', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
 				</div>
+			</div>
+		</div>
+	</div>
 
-			</div><!-- END CONTAINER -->
-
-			<div class="main-menu-container">
-
-				<div class="container">	
-					<!-- MAIN MENU -->
-					<div class="main-menu">
-						<div class="navbar navbar-default" role="navigation">
-							<!-- MAIN MENU LIST-->
-							<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right responsive-nav main-nav-list', 'fallback_cb'     => 'zerif_wp_page_menu')); ?>
-						</div>
-					</div><!-- main-menu -->
-
-				</div><!-- container -->
-
-			</div><!--main-menu-container -->
-
-
-
-		</div><!-- header-wrapper -->
-	</header><!-- header -->
+  </div><!-- header-wrapper -->
+</header><!-- header -->
