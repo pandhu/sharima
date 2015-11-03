@@ -99,7 +99,7 @@ if ( post_password_required() ) {
 			<?php
 				//$comments_count = wp_count_comments(the_id());
 				//$comments_count = 1;
-				echo $post->comment_count.' APPROVED COMMENTS';
+				echo $post->comment_count.' COMMENTS';
 			?>
 		</div>
 	</div>	
@@ -131,8 +131,9 @@ if ( post_password_required() ) {
 
 		</li>
 		<?php else:?>
+			<!--
 			<li class="comment" >
-			<!--	COMMENT by POST AUTHOR 	-->	
+				
 			<div class="comment-container clearfix bg-danger">
 				<div class="comment-author-avatar">
 					<?php echo get_avatar( $comment, 128); ?>		
@@ -150,6 +151,7 @@ if ( post_password_required() ) {
 			</div>
 
 		</li>
+		-->
 		<?php endif;?>
 		<?php endforeach;?>
 	</ol>
