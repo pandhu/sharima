@@ -57,13 +57,13 @@ if ( post_password_required() ) {
 					  'author' => '<div class="">'.
 							'<div class="row comment-form-field">'.
 								'<div class="col-md-6 sm-bot-15">'.
-									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Name." maxlength="100" class="form-control" name="name" id="name" placeholder="NAME" required>'.
-								'</div>'.		
-								'<div class="col-md-6 sm-bot-15">'.
+									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Name." maxlength="100" class="form-control" name="author" id="author" placeholder="NAME" required>'.
+								'</div>',		
+						'email'=>'<div class="col-md-6 sm-bot-15">'.
 									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Email." maxlength="100" class="form-control" name="email" id="email" placeholder="EMAIL" required>'.
 								'</div>'.
-							'</div>'.
-							'<div class="row comment-form-field">'.
+							'</div>',
+						'url'=> '<div class="row comment-form-field">'.
 								'<div class="col-md-6 sm-bot-15">'.
 									'<input type="text" class="form-control" value="" data-msg-required="Please enter your Web URL." maxlength="100" class="form-control" name="url" id="url" placeholder="URL">'.
 								'</div>'.
@@ -99,36 +99,58 @@ if ( post_password_required() ) {
 			<?php
 				//$comments_count = wp_count_comments(the_id());
 				//$comments_count = 1;
-				echo $post->comment_count.' COMMENTS';
+				echo $post->comment_count.' APPROVED COMMENTS';
 			?>
 		</div>
 	</div>	
 </div>
 <div class="col-md-12">
 	<?php if ( have_comments() ) : ?>
-	<?php $comments = get_comments()?>
+	<?php $comments = get_comments(array('order'=>'ASC'))?>
 	<ol class="comment-list clearfix">
 		<?php foreach($comments as $comment):?>
-			<?php var_dump($comment)?>
+		<?php if($comment->comment_approved):?>
 		<li class="comment" >
 			<!--	COMMENT by POST AUTHOR 	-->	
-			<div class="comment-container clearfix">
+			<div class="comment-container bg-comment-container clearfix">
 				<div class="comment-author-avatar">
-					<img alt="ava" src="images/content/avatar-1.png" class="">
+					<?php echo get_avatar( $comment, 128); ?>
+
 				</div>
 				<div class="comment-content">
 					<div class="comment-author">
 						<div class="comment-author-name">
-							<a href="#" class="a-invert" ><?php $comment['comment_author']?></a>
+							<a href="#" class="a-invert" ><?php echo $comment->comment_author?></a>
 						</div>
-						<div class="comment-date">May 21, 2015 at 10:07 am</div>
+						<div class="comment-date"><?php comment_date('l, F jS, Y') ?></div>
 					</div>
-					<p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+					<p><?php echo $comment->comment_content?></p>
 					<a class="comment-reply-link a-invert" href="#"><span aria-hidden="true" class="arrow_back"></span></a>
 				</div>
 			</div>
 
 		</li>
+		<?php else:?>
+			<li class="comment" >
+			<!--	COMMENT by POST AUTHOR 	-->	
+			<div class="comment-container clearfix bg-danger">
+				<div class="comment-author-avatar">
+					<?php echo get_avatar( $comment, 128); ?>		
+				</div>
+				<div class="comment-content ">
+					<div class="comment-author">
+						<div class="comment-author-name">
+							<a href="#" class="a-invert" ><?php echo $comment->comment_author?></a>
+						</div>
+						<div class="comment-date"><?php comment_date('l, F jS, Y') ?></div>
+					</div>
+					<p>Menunggu di moderasi oleh admin</p>
+					<a class="comment-reply-link a-invert" href="#"><span aria-hidden="true" class="arrow_back"></span></a>
+				</div>
+			</div>
+
+		</li>
+		<?php endif;?>
 		<?php endforeach;?>
 	</ol>
 	<?php endif; // have_comments() ?>

@@ -3086,6 +3086,9 @@ blockquote, blockquote p {
 	padding: 25px 20px 12px 50px;
 	margin-left: 44px;
 	margin-bottom: 30px;
+}
+
+.bg-comment-container{
 	background: #eee;
 }
 .post-author-container {

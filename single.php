@@ -189,7 +189,7 @@ get_header(); ?>
 															</div>
 														</div>	
 														<div class="blog-related-caption-container">
-															<h2><a class="a-invert" href="blog-single.html"><?php the_title()?></a></h2>
+															<h2><a class="a-invert" href="<?php the_permalink()?>"><?php the_title()?></a></h2>
 															<ul class="post-meta clearfix">
 																<li><span aria-hidden="true" class="icon_clock_alt"></span> <?php zerif_posted_on(); ?></li>
 																<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="<?php the_permalink()?>"> <?php wp_count_comments(the_id()) ?> COMMENTS</a></li>
