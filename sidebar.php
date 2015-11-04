@@ -18,7 +18,11 @@
 							CATEGORIES
 						</div>
 					</div>	
-					<?php $categories = get_categories()?>
+					<?php 
+					$args = array(
+						'hide_empty'=>0
+					);
+					$categories = get_categories($args)?>
 					<ul class="nav bs-sidenav blog-categories m-bot-30">
 						<?php foreach($categories as $item):?>
 						<li class=""><a href="<?php echo get_category_link($item->term_id)?>"><span class="blog-cat-icon"><i class="fa fa-angle-right"></i></span><?php echo $item->name?></a></li>

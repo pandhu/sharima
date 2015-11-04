@@ -19,7 +19,7 @@ get_header(); ?>
 					<div class="col-md-12">
 						<ul class="breadcrumb">
 							<li><a class="a-invert" href="<?php echo home_url('/')?>">HOME</a></li>
-							<li><a class="a-invert" href="blog-large-image.html">BLOG</a></li>
+							<li><a class="a-invert" href="blog-large-image.html">Blog</a></li>
 							<li class="active"><?php the_title(); ?></li>
 						</ul>
 					</div>
