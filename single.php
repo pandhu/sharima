@@ -63,7 +63,7 @@ get_header(); ?>
 								<ul class="post-meta clearfix">
 									<li><span aria-hidden="true" class="icon_clock_alt"></span> <?php zerif_posted_on(); ?></li>
 									<li><span aria-hidden="true" class="icon_profile"></span><a href="#"> <?php the_author()?></a></li>
-									<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="#comments"> <?php wp_count_comments(the_id()) ?> COMMENTS</a></li>
+									<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="#comments"> <?php echo (get_comments_number(get_the_ID())) ?> COMMENTS</a></li>
 									<li><span aria-hidden="true" class="icon_tags_alt"></span> 
 										<?php
 										$posttags = get_the_tags();
@@ -195,7 +195,7 @@ get_header(); ?>
 															<h2><a class="a-invert" href="<?php the_permalink()?>"><?php the_title()?></a></h2>
 															<ul class="post-meta clearfix">
 																<li><span aria-hidden="true" class="icon_clock_alt"></span> <?php zerif_posted_on(); ?></li>
-																<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="<?php the_permalink()?>"> <?php wp_count_comments(the_id()) ?> COMMENTS</a></li>
+																<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="<?php the_permalink()?>"> <?php echo get_comments_number(get_the_ID()) ?> COMMENTS</a></li>
 															</ul>
 														</div>
 														<div class="blog-carousel-text-container">
