@@ -103,7 +103,14 @@ get_header(); ?>
 			<div class="row m-bot-40">
 				<!-- CONTENT -->		
 				<div class="col-md-9">
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;	
+					$category = get_the_category();
+					$wp_query = new WP_Query( array('post_type' => 'post', 'showposts' => '8', 'paged' => $paged, 'cat'=> $category->cat_ID) );
+					
+
+				?>
+				<?php while ( $wp_query->have_posts() ) : the_post(); ?>
 					<div class="row box-with-hover m-bot-50">
 						
 						<!-- ITEM 1-->
@@ -169,6 +176,7 @@ get_header(); ?>
 					</div>  <!-- END col-md-9 -->
 
 				<?php endwhile;?>
+				<?php wpbeginner_numeric_posts_nav()?>
 				</div>
 				<!-- SIDEBAR -->		
 				<?php get_sidebar();?>

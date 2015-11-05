@@ -2,506 +2,269 @@
 
 
 <?php
-if ( get_option( 'show_on_front' ) == 'page' ) {
-    ?>
-	<div class="clear"></div>
+if ( get_option( 'show_on_front' ) == 'page' ):
+	?>
+<!-- SLIDER -->
+<div class="tp-banner-container p-top-60-mobile">
+	<div class="tp-banner" >
+		<ul>	
+			<!-- SLIDE 1 -->
+						<li data-transition="zoomin" data-slotamount="7" data-masterspeed="500" data-thumb="<?php echo get_template_directory_uri();?>/images/revo-slider/homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
+							<!-- MAIN IMAGE -->
+							<img src="<?php echo get_template_directory_uri();?>/images/revo-slider/homeslider_thumb1.jpg"  alt="slidebg1"  data-lazyload="<?php echo get_template_directory_uri();?>/images/revo-slider/slider-1-bg1-860.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat"   >
+							<!-- LAYERS -->
 
-	</header> <!-- / END HOME SECTION  -->
+
+							<!-- LAYER NR. 3 IMG GIRL-->
+							<div class="tp-caption zoomout customout rs-parallaxlevel-0"
+								data-x="480"
+								data-y="99" 
+								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="700"
+								data-start="1100"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								style="z-index: 4;"><img src="<?php echo get_template_directory_uri();?>/images/revo-slider/homeslider_thumb1.jpg" alt="" data-lazyload="images/revo-slider/girl1.png">
+							</div>
 
 
+					<!-- LAYER NR. 5  TEXT-->
+							<div class="tp-caption slider-1-cap-bg30 sfr fadeout tp-resizeme rs-parallaxlevel-0"
+								data-x="160"
+								data-y="228" 
+								data-speed="300"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 15; max-width: auto; max-height: auto; white-space: nowrap;">Fully responsive<br/> Retina ready</div>
 
-		<div id="content" class="site-content">
+							<!-- LAYER NR. 6 BG NUMBER-->
+							<div class="tp-caption slider-1-num-bg160 customin tp-resizeme fadeout tp-resizeme rs-parallaxlevel-0"
+								data-x="0"
+								data-y="228" 
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="300"
+								data-start="2000"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+							</div>
 
+							<!-- LAYER NR. 7 NUMBER-->
+							<div class="tp-caption slider-1-num tp-resizeme customin fadeout rs-parallaxlevel-0"
+								data-x="96"
+								data-y="312" 
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="300"
+								data-start="2250"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-endspeed="300"
+								style="z-index: 8;"><span class="">01</span>
+							</div>
+
+							<!-- LAYER NR. 8 TEXT -->
+							<div class="tp-caption slider-1-content-container customin tp-resizeme rs-parallaxlevel-0  disp-none-767"
+								data-x="160"
+								data-y="387" 
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="500"
+								data-start="2600"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.05"
+								data-endelementdelay="0.1"
+								style="z-index: 14; max-width: auto; max-height: auto; white-space: nowrap;"><div>Lorem ipsum dolor sit ametio, consectetur sapien.<br/> Us gravida libero eget lorem imperdiet.</div>
+							</div>		
+							<!-- LAYER NR. 11 READ MORE-->
+							<div class="tp-caption customin customout tp-resizeme rs-parallaxlevel-0"
+								data-x="160"
+								data-y="493" 
+								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+											data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="500"
+								data-start="2900"
+								data-easing="Power3.easeInOut"
+								data-splitin="none"
+								data-splitout="none"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-linktoslide="next"
+								style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='slider-1-largeredbtn'>READ MORE</a>
+							</div>
+						<!-- LAYER NR. 12 ARROW -->
+							<div class="tp-caption arrowicon customin rs-parallaxlevel-0 disp-none-767"
+								data-x="243"
+								data-y="511" 
+								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+								data-speed="300"
+								data-start="3200"
+								data-easing="Power3.easeInOut"
+								data-elementdelay="0.1"
+								data-endelementdelay="0.1"
+								data-linktoslide="next"
+								style="z-index: 13;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
+								data-speed="0.5"
+								data-xs="-5"
+								data-xe="5"
+								data-ys="0"
+								data-ye="0"
+					>
+					<img src="<?php echo get_template_directory_uri();?>/images/revo-slider/homeslider_thumb1.jpg" alt="img" data-ww="15" data-hh="15" data-lazyload="<?php echo get_template_directory_uri();?>/images/revo-slider/slider-1-arrow.png">
+							</div>
+							</div>
+
+						</li>
+
+		</ul>
+		<!-- <div class="tp-bannertimer"></div>-->	
+	</div> 
+</div>	
+<!-- BOXES 1-->
+<div class="feature-box1-container m-top-min-210 m-top-min-40-mobile font-color-change">
 	<div class="container">
+		<div class="row box-with-hover">
+			<div class="col-md-9 feature-box1">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="ca-menu hovered">
+							<div class="ca-icon"><span aria-hidden="true" class="icon_adjust-horiz"></span></div>
+							<div class="ca-content">
+								<h2 class="ca-main">#SHELF</h2>
+								<div class="ca-sub">Sed ut perspiciatis unde omnis iste nat eror acus  antium que.</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="ca-menu hovered">
+							<div class="ca-icon"><span aria-hidden="true" class="icon_cog"></span></div>
+							<div class="ca-content">
+								<h2 class="ca-main">#SPOON</h2>
+								<div class="ca-sub">Sed ut perspiciatis unde omnis iste nat eror acus  antium que.</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="ca-menu hovered">
+							<div class="ca-icon"><span aria-hidden="true" class="icon_lightbulb_alt"></span></div>
+							<div class="ca-content">
+								<h2 class="ca-main">#SUITCASE</h2>
+								<div class="ca-sub">Sed ut perspiciatis unde omnis iste nat eror acus  antium que.</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 grey-block-container">
+				<div class="grey-block"></div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
+<!-- COTENT CONTAINER -->
+<div class="title-lines-container">
+	<div class="container">
+		
+		<!-- BLOG -->
+		<div class="title-lines">
+			<div class="title-block">
+				LATEST POSTS
+			</div>
+			<div class="view-all-container">
+				<a class="button medium r-m-plus r-m-full" href="<?php get_site_url()?>index.php/blog">VIEW ALL</a>
+			</div>
+		</div>	
 
-	<div class="content-left-wrap col-md-9">
+		<div class="box-with-hover m-top-30 m-bot-50" >
 
+			<!-- Item  1 --> 
+			<?php 
+			$args = array();
+			$wp_query = new WP_Query( array('post_type' => 'post', 'showposts' => '3', 'orderby'=>'date', 'order'=>'DESC') );
+			while ( $wp_query->have_posts() ) : the_post();
+				
+			?>
+			<div class="blog-inline-item clearfix">
+				
+				<div class="col-sm-3 col-md-2">
+					<div class="row pos-relative">
+						<div class="blog-item-date2">
+							<div class="blog-item-date">30</div>
+							<div class="blog-item-mounth">MAY</div>
+						</div>
+						<div>	
+							<div class="view view-first blog-inline-img hovered">
+							<?php if(has_post_thumbnail()):
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ); 
+								?>
+								<a href="<?php echo $image[0]?>" class="lightbox">
+									<img src="<?php echo $image[0]?>" alt="Ipsum">
+								<?php else:?>
+								<a href="<?php echo get_template_directory_uri().'/images/content/blog-sqr-4.jpg'?>" class="lightbox">
+									<img src="<?php echo get_template_directory_uri().'/images/content/blog-sqr-4.jpg'?>" alt="Ipsum">
+							<?php endif;?>	
+				
+									<div class="mask">
+										<div class="zoom info"><span aria-hidden="true" class="icon_search"></span></div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
+				<div class="col-xs-12  col-sm-9 col-md-10">	
+					<div class="blog-caption-container">
+						<h2><a class="a-invert" href="<?php the_permalink()?>"><?php the_title() ?></a></h2>
+						<ul class="post-meta clearfix">
+							<li><span aria-hidden="true" class="icon_profile"></span><a href="#"> <?php the_author()?></a></li>
+							<li><span aria-hidden="true" class="icon_comment_alt"></span><a href="blog-single.html#comments"> <?php echo (get_comments_number(get_the_ID())) ?>  COMMENTS</a></li>
+							<?php
+								$posttags = get_the_tags();
+								$count = 0;
+								if ($posttags):?>
+							<li><span aria-hidden="true" class="icon_tags_alt"></span>
+								<?php
+									foreach($posttags as $tag): ?>
+								<?php if($count == count($tags)-1):?>
+									<a href="<?php $tag->url?>"><?php echo $tag->name ?></a>
+								<?php else:?>
+									<a href="<?php $tag->url?>"><?php echo $tag->name ?></a>
+								<?php endif;?>
+								<?php 	
+								endforeach;
+							endif;?>
+							</li>
+						</ul>
+					</div>
+				</div>
 
-		<div id="primary" class="content-area">
-
-			<main id="main" class="site-main" role="main">
-
-
-
-			<?php if ( have_posts() ) : ?>
-
-
-
-				<?php /* Start the Loop */ ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-					<?php
-
-						/* Include the Post-Format-specific template for the content.
-
-						 * If you want to override this in a child theme, then include a file
-
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-
-						 */
-
-						get_template_part( 'content', get_post_format() );
-
-					?>
-
-
-
-				<?php endwhile; ?>
-
-
-
-				<?php zerif_paging_nav(); ?>
-
-
-
-			<?php else : ?>
-
-
-
-				<?php get_template_part( 'content', 'none' ); ?>
-
-
-
-			<?php endif; ?>
-
-
-
-			</main><!-- #main -->
-
-		</div><!-- #primary -->
-
-
-
-	</div><!-- .content-left-wrap -->
-
-
-
-	<div class="sidebar-wrap col-md-3 content-left-wrap">
-
-		<?php get_sidebar(); ?>
-
-	</div><!-- .sidebar-wrap -->
-
-
-
+			</div>
+		<?php endwhile	;?>
+		
+		</div>
 	</div><!-- .container -->
 	<?php
-}else {
+	else:?>
 
-	if(isset($_POST['submitted'])) :
 
-
-			/* recaptcha */
-			
-			$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
-
-			$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-			
-			$zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
-
-			if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
-
-		        $captcha;
-
-		        if( isset($_POST['g-recaptcha-response']) ){
-
-		          $captcha=$_POST['g-recaptcha-response'];
-
-		        }
-
-		        if( !$captcha ){
-
-		          $hasError = true;    
-		          
-		        }
-
-		        $response = wp_remote_get( "https://www.google.com/recaptcha/api/siteverify?secret=".$zerif_contactus_secretkey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'] );
-
-		        if($response['body'].success==false) {
-
-		        	$hasError = true;
-
-		        }
-
-	        endif;
-
-
-
-			/* name */
-
-
-			if(trim($_POST['myname']) === ''):
-
-
-				$nameError = __('* Please enter your name.','zerif-lite');
-
-
-				$hasError = true;
-
-
-			else:
-
-
-				$name = trim($_POST['myname']);
-
-
-			endif;
-
-
-			/* email */
-
-
-			if(trim($_POST['myemail']) === ''):
-
-
-				$emailError = __('* Please enter your email address.','zerif-lite');
-
-
-				$hasError = true;
-
-
-			elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
-
-
-				$emailError = __('* You entered an invalid email address.','zerif-lite');
-
-
-				$hasError = true;
-
-
-			else:
-
-
-				$email = trim($_POST['myemail']);
-
-
-			endif;
-
-
-			/* subject */
-
-
-			if(trim($_POST['mysubject']) === ''):
-
-
-				$subjectError = __('* Please enter a subject.','zerif-lite');
-
-
-				$hasError = true;
-
-
-			else:
-
-
-				$subject = trim($_POST['mysubject']);
-
-
-			endif;
-
-
-			/* message */
-
-
-			if(trim($_POST['mymessage']) === ''):
-
-
-				$messageError = __('* Please enter a message.','zerif-lite');
-
-
-				$hasError = true;
-
-
-			else:
-
-
-				$message = stripslashes(trim($_POST['mymessage']));
-
-
-			endif;
-
-
-
-
-
-			/* send the email */
-
-
-			if(!isset($hasError)):
-
-
-				$zerif_contactus_email = get_theme_mod('zerif_contactus_email');
-				
-				if( empty($zerif_contactus_email) ):
-				
-					$emailTo = get_theme_mod('zerif_email');
-				
-				else:
-					
-					$emailTo = $zerif_contactus_email;
-				
-				endif;
-
-
-				if(isset($emailTo) && $emailTo != ""):
-
-					if( empty($subject) ):
-						$subject = 'From '.$name;
-					endif;
-
-					$body = "Name: $name \n\nEmail: $email \n\n Subject: $subject \n\n Message: $message";
-
-
-					$headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-
-
-					wp_mail($emailTo, $subject, $body, $headers);
-
-
-					$emailSent = true;
-
-
-				else:
-
-
-					$emailSent = false;
-
-
-				endif;
-
-
-			endif;
-
-
-		endif;
-
-
-
-	$zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
-
-	if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
-
-		include get_template_directory() . "/sections/big_title.php";
-	endif;
-
-
-?>
-
-
-</header> <!-- / END HOME SECTION  -->
-
-
-<div id="content" class="site-content">
-
-
-
-<?php
-
-	/* OUR FOCUS SECTION */
-
-	$zerif_ourfocus_show = get_theme_mod('zerif_ourfocus_show');
-
-	if( isset($zerif_ourfocus_show) && $zerif_ourfocus_show != 1 ):
-		include get_template_directory() . "/sections/our_focus.php";
-	endif;
-
-
-	/* RIBBON WITH BOTTOM BUTTON */
-
-
-	include get_template_directory() . "/sections/ribbon_with_bottom_button.php";
-
-
-
-
-
-
-
-	/* ABOUT US */
-
-	$zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
-
-	if( isset($zerif_aboutus_show) && $zerif_aboutus_show != 1 ):
-
-		include get_template_directory() . "/sections/about_us.php";
-	endif;
-
-
-	/* OUR TEAM */
-
-	$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
-
-	if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
-
-		include get_template_directory() . "/sections/our_team.php";
-	endif;
-
-
-	/* TESTIMONIALS */
-
-	$zerif_testimonials_show = get_theme_mod('zerif_testimonials_show');
-
-	if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
-
-		include get_template_directory() . "/sections/testimonials.php";
-	endif;
-
-
-
-
-	/* RIBBON WITH RIGHT SIDE BUTTON */
-
-
-	include get_template_directory() . "/sections/ribbon_with_right_button.php";
-
-
-
-	/* LATEST NEWS */
-	$zerif_latestnews_show = get_theme_mod('zerif_latestnews_show');
-
-	if( isset($zerif_latestnews_show) && $zerif_latestnews_show != 1 ):
-
-		include get_template_directory() . "/sections/latest_news.php";
-
-	endif;
-
-
-
-	/* CONTACT US */
-	$zerif_contactus_show = get_theme_mod('zerif_contactus_show');
-
-	if( isset($zerif_contactus_show) && $zerif_contactus_show != 1 ):
-		?>
-		<section class="contact-us" id="contact">
-			<div class="container">
-				<!-- SECTION HEADER -->
-				<div class="section-header">
-					
-					<?php
-					
-						$zerif_contactus_title = get_theme_mod('zerif_contactus_title',__('Get in touch','zerif-lite'));
-						if ( !empty($zerif_contactus_title) ):
-							echo '<h2 class="white-text">'.$zerif_contactus_title.'</h2>';
-						endif;
-					
-						$zerif_contactus_subtitle = get_theme_mod('zerif_contactus_subtitle');
-						if(isset($zerif_contactus_subtitle) && $zerif_contactus_subtitle != ""):
-							echo '<h6 class="white-text">'.$zerif_contactus_subtitle.'</h6>';
-						endif;
-					?>
-				</div>
-				<!-- / END SECTION HEADER -->
-
-				<!-- CONTACT FORM-->
-				<div class="row">
-
-					<?php
-
-						if(isset($emailSent) && $emailSent == true) :
-
-							echo '<div class="notification success"><p>'.__('Thanks, your email was sent successfully!','zerif-lite').'</p></div>';
-
-						elseif(isset($_POST['submitted'])):
-
-							echo '<div class="notification error"><p>'.__('Sorry, an error occured.','zerif-lite').'</p></div>';
-
-						endif;
-
-
-
-						if(isset($nameError) && $nameError != '') :
-
-							echo '<div class="notification error"><p>'.esc_html($nameError).'</p></div>';
-
-						endif;
-
-						if(isset($emailError) && $emailError != '') :
-
-							echo '<div class="notification error"><p>'.esc_html($emailError).'</p></div>';
-
-						endif;
-
-						if(isset($subjectError) && $subjectError != '') :
-
-							echo '<div class="notification error"><p>'.esc_html($subjectError).'</p></div>';
-
-						endif;
-
-						if(isset($messageError) && $messageError != '') :
-
-							echo '<div class="notification error"><p>'.esc_html($messageError).'</p></div>';
-
-						endif;
-
-					?>
-
-					<form role="form" method="POST" action="" onSubmit="this.scrollPosition.value=(document.body.scrollTop || document.documentElement.scrollTop)" class="contact-form">
-
-						<input type="hidden" name="scrollPosition">
-
-						<input type="hidden" name="submitted" id="submitted" value="true" />
-
-						<div class="col-lg-4 col-sm-4 zerif-rtl-contact-name" data-scrollreveal="enter left after 0s over 1s">
-
-							<input required="required" type="text" name="myname" placeholder="<?php _e('Your Name','zerif-lite'); ?>" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
-
-						</div>
-
-						<div class="col-lg-4 col-sm-4 zerif-rtl-contact-email" data-scrollreveal="enter left after 0s over 1s">
-
-							<input required="required" type="email" name="myemail" placeholder="<?php _e('Your Email','zerif-lite'); ?>" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
-
-						</div>
-
-						<div class="col-lg-4 col-sm-4 zerif-rtl-contact-subject" data-scrollreveal="enter left after 0s over 1s">
-
-							<input required="required" type="text" name="mysubject" placeholder="<?php _e('Subject','zerif-lite'); ?>" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
-
-						</div>
-
-						<div class="col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
-
-							<textarea name="mymessage" class="form-control textarea-box" placeholder="<?php _e('Your Message','zerif-lite'); ?>"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
-
-						</div>
-	
-						<?php
-							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label',__('Send Message','zerif-lite'));
-							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
-							endif;
-						?>
-						
-						<?php 
-
-							$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
-							$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-							$zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
-
-							if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
-
-								echo '<div class="g-recaptcha zerif-g-recaptcha" data-sitekey="' . $zerif_contactus_sitekey . '"></div>';
-
-							endif;
-
-						?>
-
-					</form>
-
-				</div>
-
-				<!-- / END CONTACT FORM-->
-
-			</div> <!-- / END CONTAINER -->
-
-		</section> <!-- / END CONTACT US SECTION-->
-		<?php
-	endif;
-
-}
+<?php endif;
 get_footer(); ?>

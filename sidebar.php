@@ -47,7 +47,7 @@
 										<li class="latest-post-sidebar clearfix">
 											<div class="lp-img-cont left">
 											<?php if(has_post_thumbnail()):
-												$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+												$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' ); 
 												?>
 												<a href="<?php echo $image[0]?>" class="lightbox">
 													<img src="<?php echo $image[0]?>" alt="Ipsum"></a>
@@ -57,7 +57,7 @@
 											<?php endif;?>	
 											</div>
 											<div class="lp-title-cont left">
-												<p class="latest-post-sidebar-title"><a class="a-invert" href="#"><?php the_title()?></a></p>
+												<p class="latest-post-sidebar-title"><a class="a-invert" href="<?php the_permalink()?>"><?php the_title()?></a></p>
 												<p class="latest-post-sidebar-date"><?php zerif_posted_on(); ?></p>
 												<p class="latest-post-sidebar-comm"><?php wp_count_comments(the_id()) ?> comments</p>
 											</div>	
